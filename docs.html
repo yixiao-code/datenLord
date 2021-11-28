@@ -6,7 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link type="text/css" rel="styleSheet"  href="./css/index.css" />
-    <link type="text/css" rel="styleSheet"  href="./css/reset.css.css" />
+    <link type="text/css" rel="styleSheet"  href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/vs2015.min.css">
+    <script src="./js/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
     <style>
 
         .content {
@@ -72,18 +75,143 @@
         .ellipse p{
             transform: rotate(210deg);
         }
+
+        .quickStart {
+            width: 1920px;
+            background: url(./images/quick.png) 100% no-repeat;
+            z-index: 108;
+        }
+
+        .quickStart_bkcolor {
+            width: 100%;
+            height: 100%;
+            background-color: #D6EAFF;
+            opacity: 80%;
+            display: flex;
+            justify-content: center;
+            padding-bottom: 65px;
+        }
+
+        .quickStart_con {
+            width: 1120px;
+            height: 100%;
+        }
+
+        .quickStart_con .title {
+            font-size: 30px;
+            font-family: Helvetica-Bold, Helvetica;
+            font-weight: bold;
+            color: #000000;
+            line-height: 30px;
+            margin-bottom: 0;
+        }
+
+        .title_con {
+            font-size: 18px;
+            font-family: Helvetica;
+            color: #000000;
+            line-height: 30px
+        }
+
+        .para {
+            font-size: 18px;
+            font-family: Helvetica;
+            color: #000000;
+            line-height: 18px;
+            margin: 0;
+        }
+
+        .margintop20 {
+            margin-top: 20px;
+        }
+
+        .margin71 {
+            margin: 71px 0 0 0 !important;
+        }
+
+        .margin60 {
+            margin-top: 60px;
+        }
+
+        .margin34 {
+            margin: 34px 0 !important;
+        }
+
+        .line_margin40 {
+            margin: -60px 40px 0 40px !important;
+        }
+
+        .quickStartWord {
+            font-size: 18px;
+            font-family: Helvetica;
+            color: #000000;
+            line-height: 18px;
+        }
+
+        .wordmargin {
+            margin: 15px 0 0 0!important;
+        }
+
+        code.hljs {
+            padding: 0 32px !important;
+            line-height: 18px;
+        }
+
+        pre {
+            margin: 0 !important;
+        }
+
+        .hljs {
+            background: black;
+        }
+
+        pre code.hljs {
+            font-size: 18px;
+            line-height: 32px;
+            font-family: "微软雅黑", Tahoma, Helvetica, Arial, sans-serif;
+            border-radius: 8px;
+        }
+
+        .hljs-meta .hljs-string, .hljs-string, .hljs-attr, .hljs-attribute, .hljs-meta, .hljs-bullet {
+            color: #34CE58;
+        }
+
+        .jingyu {
+            margin-top: 50px;
+            width: 381px;
+            height: 321px;
+            position: absolute;
+            right: -150px;
+        }
+
+        .code_box {
+            background-color: #000000;
+            padding: 32px;
+            color: #34CE58;
+            font-size: 18px;
+            line-height: 32px;
+            border-radius: 8px;
+            z-index: 200;
+        }
     </style>
 </head>
 <body>
 <div class="main">
     <div class="header">
         <div class="header_left">
-            <img src="images/daztenLord.png">
+            <img src="images/daztenLord.png"  onclick="window.location.href='home.html'">
         </div>
         <div class="header_right">
-            <p>DOCS</p>
-            <p>JOIN US</p>
-            <p>EN</p>
+            <div class="div_hover">
+                <p onclick="window.location.href='docs.html'">DOCS</p>
+            </div>
+            <div class="div_hover">
+                <p onclick="window.location.href='join.html'">JOIN US</p>
+            </div>
+            <div>
+                <p>EN</p>
+                <img src="images/drop-down.png" style="width: 15px; height: 10px;margin-left: 10px;">
+            </div>
         </div>
     </div>
     <div class="content">
@@ -149,6 +277,93 @@
                     <div style="width: 540px; display: flex;flex-direction: column;align-items: center">
                         <img src="images/5.png">
                         <p>Throughput-sensitive cases, that DatenLord will pre-load remote data into local clusters to speed up access: AI and big-data jobs, especially training tasks; Multi-cloud storage unified management, to facilitate application migration across clouds.</p>
+                    </div>
+                </div>
+                <h3 style="text-align: center;margin: 100px 0 0 0;">Quick Start</h3>
+            </div>
+        </div>
+        <div class="quickStart">
+            <div class="quickStart_bkcolor">
+                <div class="quickStart_con">
+                    <h3 class="title margin71">To deploy DatenLord via K8S</h3>
+                    <div style="display: flex;justify-content: space-between;margin-top: 15px">
+                        <p class="quickStartWord wordmargin">just simply run:</p>
+                        <div style="width: 616px;" class="code_box">
+                            <p>sed -e 's/e2e_test/latest/g' scripts/datenlord.yaml > datenlord-deploy.yaml kubectl apply -f datenlord-deploy.yaml</p>
+                        </div>
+                    </div>
+                    <div class="line_margin40">
+                        <img src="./images/quick_line.png">
+                    </div>
+                    <div style="display: flex;justify-content: space-between">
+                        <div style="width: 680px; margin-top: -80px;height: auto;background-color: #000000;border-radius: 8px;">
+                        <pre><code>
+cat <<EOF >datenlord-demo.yaml
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: pvc-datenlord-test
+spec:
+  accessModes:
+   - ReadWriteOnce
+  volumeMode: Filesystem
+  resources:
+    requests:
+      storage: 100Mi
+  storageClassName: csi-datenlord-sc
+
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: mysql-datenlord-test
+spec:
+    containers:
+    - name: mysql
+      image: mysql
+      env:
+      - name: MYSQL_ROOT_PASSWORD
+        value: "rootpasswd"
+      volumeMounts:
+      - mountPath: /var/lib/mysql
+        name: data
+        subPath: mysql
+    volumes:
+    - name: data
+      persistentVolumeClaim:
+        claimName: pvc-datenlord-test
+EOF
+
+kubectl apply -f datenlord-demo.yaml
+                        </code></pre>
+                        </div>
+                        <div style="position: relative">
+                            <div style="width: 385px;margin-top: -50px;margin-bottom: 50px">
+                                <h3 class="title">To use DatenLord</h3>
+                                <p class="title_con margintop20">just define PVC using DatenLord Storage Class, and then deploy a Pod using this PVC:</p>
+                            </div>
+                            <div style="height: 456px;border-right: 2px #1E1E1E solid;margin-right: 40px; opacity: 50%">
+
+                            </div>
+                            <div style="width: 381px;height: 321px;">
+                                <img src="images/jingyu.png" class="jingyu">
+                                <div style="clear: both"></div>
+                            </div>
+                            <div>
+                                <img src="images/line2.png" style="    position: absolute;margin-top: 80px; margin-left: -228px;">
+                     on m   </div>
+                        </div>
+                    </div>
+                    <p class="para margin60">It may need to install snapshot CRD and controller on K8S,</p>
+                    <h3 class="title" style="margin-top: 30px;margin-bottom: 35px">if used K8S CSI snapshot feature:</h3>
+                    <div style="width: 100%" class="code_box">
+                        <p>
+                            kubectl apply -f https://raw.githubusercontent.com/kubernetes-csi/external-snapshotter/master/client/config/crd/snapshot.storage.k8s.io_volumesnapshots.yaml
+                            kubectl apply -f https://raw.githubusercontent.com/kubernetes-csi/external-snapshotter/master/client/config/crd/snapshot.storage.k8s.io_volumesnapshotcontents.yaml
+                            kubectl apply -f https://raw.githubusercontent.com/kubernetes-csi/external-snapshotter/master/client/config/crd/snapshot.storage.k8s.io_volumesnapshotclasses.yaml
+                            kubectl apply -f https://raw.githubusercontent.com/kubernetes-csi/external-snapshotter/master/deploy/kubernetes/snapshot-controller/rbac-snapshot-controller.yaml
+                            kubectl apply -f https://raw.githubusercontent.com/kubernetes-csi/external-snapshotter/master/deploy/kubernetes/snapshot-controller/setup-snapshot-controller.yaml
+                        </p>
                     </div>
                 </div>
             </div>
