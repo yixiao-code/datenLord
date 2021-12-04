@@ -185,6 +185,10 @@ table {
     -ms-user-select: none;
     -webkit-user-select: none;
 }
+
+h3 {
+    font-size: unset;
+}
 /*禁止文字选中*/
 
 /*************************************************************/

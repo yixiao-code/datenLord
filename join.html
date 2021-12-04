@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link type="text/css" rel="styleSheet"  href="./css/index.css" />
-    <link type="text/css" rel="styleSheet"  href="./css/reset.css.css" />
+    <link type="text/css" rel="styleSheet"  href="./css/reset.css" />
+    <link type="text/css" rel="styleSheet"  href="./css/main.css" />
     <style>
 
         .content {
@@ -37,6 +38,9 @@
 
         .recruit_title {
             margin-bottom: 32px;
+        }
+
+        .recruit_title h3 {
             font-size: 40px;
             font-family: Helvetica;
             color: #000000;;
@@ -44,10 +48,14 @@
 
         .recruit_Con_left p {
             margin: 0;
-            line-height: 30px;
+            font-size:14px;
+            line-height: 24px;
         }
 
         h3 {
+            font-size:14px;
+            line-height: 24px;
+            font-weight: bold;
             margin: 0;
         }
 
@@ -55,13 +63,14 @@
             margin: 0;
         }
 
+        .recruit_Con h4 {
+            font-weight: bold;
+        }
+
         .con_top {
             margin-top: 40px;
         }
 
-        .footer {
-            margin-top: 100px;
-        }
     </style>
 </head>
 <body>
@@ -69,7 +78,8 @@
     <div class="header_box">
         <div class="header">
             <div class="header_left">
-                <img src="images/daztenLord.png"  onclick="window.location.href='home.html'">
+                <img src="images/daztenLord.png"  onclick="window.location.href='home.html'" class="datenLord">
+                <img src="images/datenLord_logo.png"  onclick="window.location.href='home.html'" class="datenLord_logo">
             </div>
             <div class="header_right">
                 <div class="div_hover">
@@ -80,7 +90,7 @@
                 </div>
                 <div>
                     <p>EN</p>
-                    <img src="images/drop-down.png" style="width: 15px; height: 10px;margin-left: 10px;">
+                    <img src="images/drop-down.png" class="header_arrow">
                 </div>
             </div>
         </div>
@@ -96,11 +106,11 @@
                 </div>
                 <div class="recruit_Con">
                     <div class="recruit_Con_left">
-                        <div>
+                        <div class="recruit_Con_box">
                             <h4>岗位职责:</h4>
                             <p>参与高性能分布式存储系统研发，开发语言为Rust</p>
                         </div>
-                        <div class="con_top">
+                        <div class="con_top recruit_Con_box">
                             <h4>基本要求:</h4>
                             <p>1.熟悉Rust语言;</p>
                             <p>2.熟悉多线程、高并发编程;</p>
@@ -108,7 +118,7 @@
                             <p>4.熟悉Linux操作系统;</p>
                             <p>5.具有很强的学习能力，自我驱动以及团队合作意识;</p>
                         </div>
-                        <div class="con_top">
+                        <div class="con_top recruit_Con_box">
                             <h4>加分项:</h4>
                             <p>1.熟悉Rust异步编程、有tokio或async-std使用经验优先;</p>
                             <p>2.熟悉Linux内核IO相关功能，有io_uring、ext4、FUSE、eBPF相关开发经验优先;</p>
@@ -120,7 +130,7 @@
                             <p>8.有K8S的CNI或CSI接口编程经验优先;</p>
                             <p>9.实习生的话能长期实习优先;</p>
                         </div>
-                        <div class="con_top">
+                        <div class="con_top recruit_Con_box">
                             <h4>工作地点:</h4>
                             <p>远程办公，地点不限</p>
                         </div>
@@ -136,14 +146,14 @@
                 </div>
                 <div class="recruit_Con">
                     <div class="recruit_Con_left">
-                        <div>
+                        <div class="recruit_Con_box">
                             <h4>岗位职责:</h4>
                             <p>1.负责基于FPGA实现网络IO加速以及本地IO加速SoC的设计与RTL实现</p>
                             <p>2.实现常用外设接口IP的RTL设计、集成和验证;</p>
-                            <p>3.参与SOC集成设计与验证，生成测试和仿真向量;</p>
+                                <p>3.参与SOC集成设计与验证，生成测试和仿真向量;</p>
                             <p>4.撰写相关设计文档;</p>
                         </div>
-                        <div class="con_top">
+                        <div class="con_top recruit_Con_box">
                             <h4>基本要求:</h4>
                             <p>1.熟悉基于FPGA的设计流程，熟悉Xilinx的FPGA芯片架构，熟练掌握Xilinx的FPGA开发工具;</p>
                             <p>2.熟悉基于Scala的Spinal HDL或Chisel等新一代HDL语言;</p>
@@ -151,7 +161,7 @@
                             <p>4.熟练掌握TCL脚本语言;</p>
                             <p>5.具有很强的学习能力，自我驱动以及团队合作意识;</p>
                         </div>
-                        <div class="con_top">
+                        <div class="con_top recruit_Con_box">
                             <h4>加分项:</h4>
                             <p>1.有网络或存储硬件系统开发经验优先;</p>
                             <p>2.熟悉PCle、DMA、NVMe、DDR3/4、SerDes等相关接口开发优先;</p>
@@ -161,7 +171,7 @@
                             <p>6.有SystemVerilog Assertion使用经验优先;</p>
                             <p>9.实习生的话能长期实习优先;</p>
                         </div>
-                        <div class="con_top">
+                        <div class="con_top recruit_Con_box">
                             <h4>工作地点:</h4>
                             <p>远程办公，地点不限</p>
                         </div>

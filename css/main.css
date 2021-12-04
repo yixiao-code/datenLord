@@ -1,0 +1,210 @@
+@media only screen and (max-width: 767px) {
+    .main {
+        min-width: 340px;
+        width: 100%;
+    }
+
+    /** 头部开始 */
+    .main .header_box {
+        height: 50px;
+    }
+    .main .header {
+        width: 100%;
+        padding: 0 15px;
+    }
+    .header .datenLord_logo {
+        display: block;
+    }
+
+    .main .header .header_right div {
+        width: auto;
+    }
+
+    .main .header .header_right p {
+        margin-left: 20px;
+        width: auto;
+        height: 16px;
+        font-size: 16px;
+        font-family: PingFangSC-Regular, PingFang SC;
+        font-weight: 400;
+        color: #2F519C;
+        line-height: 16px;
+    }
+
+    .main .header .header_arrow {
+        width: 10px;
+        height: 6px;
+        margin-left: 6px;
+    }
+
+    .header .datenLord {
+        display: none;
+    }
+    /** 头部结束 */
+
+    /** 内容开始 */
+
+    .main .content_body {
+        margin: 15px 0 45px 0 !important;
+    }
+    .main .content_box {
+        width: 165px;
+        height: 255px;
+        margin-bottom: 15px;
+        margin-top: 15px;
+        margin-right: 0;
+    }
+
+    .main .content_body:nth-child(2n + 1) {
+        margin-right: 15px;
+    }
+
+    .main .content_box:nth-child(2n + 1) {
+        margin-right: 15px;
+    }
+
+    .main .content .content_body {
+        flex-flow: wrap;
+    }
+
+    .main .content_box_title {
+        font-size: 18px;
+        margin: 0;
+    }
+    .main .content_box_con {
+        font-size: 14px;
+    }
+
+    /**  join us start */
+
+    .content .content_recruit {
+        margin: 15px 20px;
+    }
+    .recruit_Con_img {
+        margin: 0;
+        display: none;
+    }
+
+    .content .recruit_title {
+        margin-bottom: 20px;
+    }
+
+    .content .recruit_title h3 {
+        font-size: 20px;
+        font-family: Helvetica;
+        color: #000000;
+        line-height: 20px;
+    }
+
+
+    .content .recruit_Con_left{
+        width: auto;
+    }
+    .content .recruit_Con_left p {
+        font-size: 14px;
+        font-family: PingFangSC-Semibold, PingFang SC;
+        color: #000000;
+        line-height: 24px;
+    }
+
+    .content .recruit_Con_box h4 {
+        font-size: 14px;
+        font-family: PingFangSC-Semibold, PingFang SC;
+        color: #000000;
+        font-weight: 600;
+        line-height: 24px;
+    }
+
+    .content .con_top {
+        margin-top: 20px;
+    }
+    /** join us end */
+
+    /** docs start */
+
+    .docs_phone_con {
+        padding: 10px 20px;
+    }
+
+    .docs_con_phone h3{
+        height: auto;
+        font-size: 24px;
+        font-family: Helvetica;
+        color: #000000;
+        line-height: 24px;
+        margin-bottom: 20px;
+    }
+
+    .docs_con_phone .h3_center {
+        text-align: center;
+    }
+
+    .docs_con_phone .text {
+        font-size: 14px;
+        font-family: Helvetica-Light, Helvetica;
+        font-weight: 300;
+        color: #111111;
+        line-height: 20px;
+    }
+
+    .docs_con_phone .code_box {
+        box-sizing: border-box;
+        padding: 10px 15px;
+        background-color: #0C162D;
+    }
+
+    .docs_con_phone .code_box p {
+        word-break: break-word;
+        font-size: 14px;
+        font-family: Helvetica-Light, Helvetica;
+        font-weight: 300;
+        color: #34CE58;
+        line-height: 20px;
+    }
+
+    .docs_con_phone code.hljs {
+        padding: 10px 15px;
+        line-height: 20px;
+    }
+
+    .docs_con_phone pre code.hljs {
+        font-size: 14px;
+        font-family: Helvetica-Light, Helvetica;
+        font-weight: 300;
+        color: #34CE58;
+        line-height: 20px;
+    }
+
+    .content .docs_con_phone{
+        display: block;
+    }
+
+    .content .docs_con {
+        display: none;
+    }
+
+    /** docs end */
+
+    /** 内容结束 */
+
+    /** 页脚开始 */
+    .main .footer {
+        width: 100%;
+    }
+
+    .main .footer_box{
+        height: 240px;
+    }
+    .main .footer .footer_img {
+        margin-bottom: 34px;
+    }
+
+    .main .footer {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    /** 页脚结束 */
+}

@@ -54,6 +54,16 @@ body{
     color: #FFFFFF;
 }
 
+.datenLord_logo {
+    display: none;
+}
+
+.header_arrow {
+    width: 15px;
+    height: 10px;
+    margin-left: 10px;
+}
+
 /* header --end*/
 
 /* footer --start*/
