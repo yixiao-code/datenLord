@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Docs</title>
     <link type="text/css" rel="styleSheet"  href="./css/index.css" />
     <link type="text/css" rel="styleSheet"  href="./css/reset.css" />
     <link type="text/css" rel="styleSheet"  href="./css/main.css" />
@@ -236,7 +236,7 @@
                 </div>
                 <div>
                     <p>EN</p>
-                    <img src="images/drop-down.png" style="width: 15px; height: 10px;margin-left: 10px;">
+                    <img src="images/drop-down.png" class="header_arrow">
                 </div>
             </div>
         </div>
@@ -256,21 +256,21 @@
             </div>
             <div class="content_box ffback">
                 <div class="content_box_con">
-                    <div>
+                    <div style="width: 100%">
                         <h3 style="text-align: center">Why do we build Date?</h3>
                         <div style="display: flex;justify-content: space-between">
-                            <div content="con_left" style="display: flex;align-items: center;margin-right: 20px">
+                            <div content="con_left" style="margin-right: 20px">
                                 <img src="images/6.png">
                             </div>
                             <div class="con_right">
-                                <p class="text">Firstly, the recent computer hardware architecture revolution stimulates storage software refractory. The mainstream SDS systems haven’t changed much in recent 10 years, and at that time hard-disk drive (HDD) was the main storage device. Nowadays, solid-state drive (SSD) become the mainstream, not to mention the most advanced SSD, NVMe and non-volatile memory. The performance of storage devices becomes hundreds of times faster than before, that the HDD latency is around 1~10 ms, whereas the SSD latency is around 50–150 μs, NVMe latency is around 25 μs, and non-volatile memory latency is 350 ns. With the storage performance revolution, traditional blocking-style/synchronous IO becomes very inefficient, and non-blocking-style/asynchronous IO is booming, such as the recent Linux kernel has built native-asynchronized IO mechanism, io_uring. Moreover, context switch overhead becomes no more negligible, w.r.t. SSD latency. Many modern programming languages have proposed asynchronized programming, green thread or coroutine to manage asynchronous IO tasks, so as to avoid context switch overhead introduced by blocking-style/synchronous IO. Therefore we think it’s time to build a next-generation SDS system that takes advantage of the storage performance revolution as far as possible, by leveraging non-blocking/asynchronous IO, asynchronized programming, NVMe, and even non-volatile memory.</p>
+                                <p class="text" style="word-break: break-all;word-wrap:break-word; overflow:hidden;">Firstly, the recent computer hardware architecture revolution stimulates storage software refractory. The mainstream SDS systems haven’t changed much in recent 10 years, and at that time hard-disk drive (HDD) was the main storage device. Nowadays, solid-state drive (SSD) become the mainstream, not to mention the most advanced SSD, NVMe and non-volatile memory. The performance of storage devices becomes hundreds of times faster than before, that the HDD latency is around 1~10 ms, whereas the SSD latency is around 50–150 μs, NVMe latency is around 25 μs, and non-volatile memory latency is 350 ns. With the storage performance revolution, traditional blocking-style/synchronous IO becomes very inefficient, and non-blocking-style/asynchronous IO is booming, such as the recent Linux kernel has built native-asynchronized IO mechanism, io_uring. Moreover, context switch overhead becomes no more negligible, w.r.t. SSD latency. Many modern programming languages have proposed asynchronized programming, green thread or coroutine to manage asynchronous IO tasks, so as to avoid context switch overhead introduced by blocking-style/synchronous IO. Therefore we think it’s time to build a next-generation SDS system that takes advantage of the storage performance revolution as far as possible, by leveraging non-blocking/asynchronous IO, asynchronized programming, NVMe, and even non-volatile memory.</p>
                             </div>
                         </div>
                         <div style="margin-top: 40px;display: flex;justify-content: space-between">
                             <div content="con_left">
                                 <p class="text">Secondly, most existing IT systems are computing and storage isolated, that applications and storage systems had their dedicated clusters, respectively. This isolated architecture is no longer feasible, in that nowadays, applications are dealing with much larger data than ever before. One notorious example is that an AI training job takes one hour to load training data whereas the training job itself finishes in only 45 minutes. Therefore, isolating computing and storage makes the whole system very inefficient, as transferring data between applications and storage systems wastes much time. We propose a more efficient computing and storage coupled architecture, which schedules jobs closer to data, so as to reduce data transfer overhead and improve data processing efficiency, exactly as HDFS does, except HDFS is dedicated for Hadoop, whereas DatenLord is more for container ecosystems.</p>
                             </div>
-                            <div class="con_right" style="display: flex;align-items: center">
+                            <div class="con_right" style="align-items: center">
                                 <img src="images/7.png">
                             </div>
                         </div>
@@ -304,7 +304,7 @@
             </div>
             <div class="content_box ffback">
                 <div class="content_box_con">
-                    <div>
+                    <div style="width: 100%">
                         <h3 style="text-align: center;margin-bottom: 30px">DatenLord Optimization Strategy</h3>
                         <div style="display: flex;justify-content: space-between">
                             <p style="margin: 0" class="lineHight18">In general, there are two kinds of storage needs from an application perspective: one is latency-sensitive, and the other is throughput-sensitive. As for latency-sensitive applications, such as database applications, like MySQL, MongoDB, and ElasticSearch, etc, their performance relies on how fast a single I/O-request got handled. As for throughput-sensitive applications, such as big data and AI machine learning jobs, like Spark, Hadoop, and TensorFlow, etc, the more data load per unit time, the better their performance. </p>
@@ -321,12 +321,12 @@
                         <h3 style="text-align: center">Target Usage Scenarios</h3>
                         <p style="margin: 30px 0 20px 0"  class="lineHight18">DatenLord has several target scenarios, which fall into two main categories:</p>
                         <div style="display: flex;justify-content: space-between;width: 100%">
-                            <div style="width: 540px; display: flex;flex-direction: column;align-items: center" >
-                                <img src="images/4.png">
+                            <div style="width: 540px; flex-direction: column;align-items: center" >
+                                <div style="width: 100%;text-align: center"><img src="images/4.png"></div>
                                 <p  class="lineHight18">Latency-sensitive cases, that DatenLord will coordinate with K8S to schedule containers close to data to minimize latency: Containerized applications, especially stateful applications; Serverless, Lambda, FaaS, etc, event-driven tasks;</p>
                             </div>
-                            <div style="width: 540px; display: flex;flex-direction: column;align-items: center">
-                                <img src="images/5.png">
+                            <div style="width: 540px; flex-direction: column;align-items: center">
+                                <div style="width: 100%;text-align: center"><img src="images/5.png"></div>
                                 <p  class="lineHight18">Throughput-sensitive cases, that DatenLord will pre-load remote data into local clusters to speed up access: AI and big-data jobs, especially training tasks; Multi-cloud storage unified management, to facilitate application migration across clouds.</p>
                             </div>
                         </div>

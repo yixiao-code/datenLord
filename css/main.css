@@ -20,8 +20,11 @@
         width: auto;
     }
 
+    .main .header .div_hover {
+        margin-right: 20px;
+    }
+
     .main .header .header_right p {
-        margin-left: 20px;
         width: auto;
         height: 16px;
         font-size: 16px;
