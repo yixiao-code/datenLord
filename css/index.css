@@ -49,7 +49,7 @@ body{
     color: #5C77B2;
 }
 
-.main .header .header_right .div_hover:hover {
+.main .header .header_right .active {
     background-color: #5C77B2;
     color: #FFFFFF;
 }

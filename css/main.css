@@ -17,11 +17,8 @@
     }
 
     .main .header .header_right div {
+        padding: 0 10px;
         width: auto;
-    }
-
-    .main .header .div_hover {
-        margin-right: 20px;
     }
 
     .main .header .header_right p {
@@ -30,8 +27,11 @@
         font-size: 16px;
         font-family: PingFangSC-Regular, PingFang SC;
         font-weight: 400;
-        color: #2F519C;
         line-height: 16px;
+    }
+
+    .main .header .header_right .active {
+        color: #FFFFFF;
     }
 
     .main .header .header_arrow {
@@ -42,6 +42,12 @@
 
     .header .datenLord {
         display: none;
+    }
+
+    .content .home_banner {
+        background: url(../images/banner_mo.jpg) 100% no-repeat;
+        height: 300px;
+        background-size: 100% 100%;
     }
     /** 头部结束 */
 
@@ -73,9 +79,23 @@
     .main .content_box_title {
         font-size: 18px;
         margin: 0;
+        font-weight: 400;
+        margin-bottom: 10px;
+        font-family: PingFangSC-Regular, PingFang SC;
     }
     .main .content_box_con {
+        margin-bottom: 18px;
         font-size: 14px;
+        padding: 0 10px;
+        font-family: PingFangSC-Regular, PingFang SC;
+        font-weight: 400;
+        color: #000000;
+        line-height: 22px;
+    }
+
+    .main .home_img {
+        width: 135px;
+        height: 135px;
     }
 
     /**  join us start */
@@ -121,6 +141,10 @@
     .content .con_top {
         margin-top: 20px;
     }
+
+    .content .content_body:last-child {
+        margin-bottom: 45px !important;
+    }
     /** join us end */
 
     /** docs start */
@@ -135,11 +159,17 @@
         font-family: Helvetica;
         color: #000000;
         line-height: 24px;
-        margin-bottom: 20px;
     }
 
     .docs_con_phone .h3_center {
         text-align: center;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .margin10 {
+        margin-top: 10px;
+        margin-bottom: 10px;
     }
 
     .docs_con_phone .text {
@@ -161,20 +191,23 @@
         font-size: 14px;
         font-family: Helvetica-Light, Helvetica;
         font-weight: 300;
-        color: #34CE58;
-        line-height: 20px;
-    }
-
-    .docs_con_phone code.hljs {
-        padding: 10px 15px;
+        color: #2A9E4D;
         line-height: 20px;
     }
 
     .docs_con_phone pre code.hljs {
+        padding: 0 15px !important;
+        line-height: 20px;
+    }
+
+    .docs_con_phone .hljs {
+        background-color: #0C162D !important;
+    }
+    .docs_con_phone pre code.hljs {
         font-size: 14px;
         font-family: Helvetica-Light, Helvetica;
         font-weight: 300;
-        color: #34CE58;
+        color: #2A9E4D;
         line-height: 20px;
     }
 
@@ -184,6 +217,34 @@
 
     .content .docs_con {
         display: none;
+    }
+
+    .quick_start_title {
+        margin-top: 20px;
+        font-size: 18px !important;
+        font-family: Helvetica-Bold, Helvetica;
+        font-weight: bold;
+        color: #111111;
+        line-height: 20px;
+        margin-bottom: 5px !important;
+    }
+
+    .docs_con_phone .quickStartWord {
+        font-size: 14px;
+        font-family: Helvetica-Light, Helvetica;
+        font-weight: 300;
+        color: #111111;
+        line-height: 20px;
+        margin-bottom: 10px;
+    }
+
+    .img_margin_10 {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .docs_con_phone .map_text {
+        margin-left: 9px !important;
     }
 
     /** docs end */
