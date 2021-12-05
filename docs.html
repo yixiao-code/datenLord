@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Docs</title>
+  <link rel="icon" href="./images/favicon.ico" type="image/x-icon"/>
   <link type="text/css" rel="styleSheet" href="./css/index.css" />
   <link type="text/css" rel="styleSheet" href="./css/reset.css" />
   <link type="text/css" rel="styleSheet" href="./css/main.css" />
@@ -42,10 +43,10 @@
     }
 
     .text {
-      font-size: 18px;
+      font-size: 16px;
       font-family: Helvetica-Light, Helvetica;
       font-weight: 300;
-      color: #000000;
+      color: #111111;
       line-height: 24px;
       margin: 0 !important;
     }
@@ -212,7 +213,7 @@
     }
 
     .lineHight18 {
-      font-size: 18px;
+      font-size: 16px;
       font-family: Helvetica-Light, Helvetica;
       font-weight: 300;
       color: #000000;
@@ -226,6 +227,22 @@
     .docs_con {
       display: block;
     }
+
+    .mapText {
+      font-size: 18px;
+      font-family: Helvetica;
+      color: #000000;
+      line-height: 24px;
+    }
+
+    .box_title {
+      font-size: 32px;
+      font-family: Helvetica;
+      color: #000000;
+      line-height: 32px;
+      margin-bottom: 30px;
+    }
+
   </style>
 </head>
 
@@ -256,7 +273,7 @@
         <div class="content_box f5back">
           <div class="content_box_con">
             <div style="width: 100%">
-              <h3 style="margin-bottom: 30px">What is Datenlord ?</h3>
+              <h3 style="margin-bottom: 30px" class="box_title">What is Datenlord ?</h3>
               <div style="display: flex;justify-content: space-between">
                 <div content="con_left">
                   <p class="text">DatenLord is a next-generation cloud-native distributed storage system, which aims to
@@ -281,13 +298,13 @@
         <div class="content_box ffback">
           <div class="content_box_con">
             <div style="width: 100%">
-              <h3 style="text-align: center;margin-bottom: 30px">Why do we build DatenLord?</h3>
+              <h3 style="text-align: center;margin-bottom: 30px" class="box_title">Why do we build DatenLord?</h3>
               <div style="display: flex;justify-content: space-between">
                 <div content="con_left" style="margin: auto 60px auto 0;">
                   <img src="images/6.png" style="width: 340px;height: 300px">
                 </div>
                 <div class="con_right">
-                  <p class="text" style="word-break: break-all;word-wrap:break-word; overflow:hidden;">Firstly, the
+                  <p class="text" style="word-break: break-word;word-wrap:break-word; overflow:hidden;">Firstly, the
                     recent computer hardware architecture revolution stimulates storage software refractory. The
                     mainstream SDS systems haven’t changed much in recent 10 years, and at that time hard-disk drive
                     (HDD) was the main storage device. Nowadays, solid-state drive (SSD) become the mainstream, not to
@@ -318,7 +335,7 @@
                     improve data processing efficiency, exactly as HDFS does, except HDFS is dedicated for Hadoop,
                     whereas DatenLord is more for container ecosystems.</p>
                 </div>
-                <div class="con_right" style="align-items: center">
+                <div class="con_right" style="align-items: center;margin-left: 60px">
                   <img src="images/7.png">
                 </div>
               </div>
@@ -328,7 +345,7 @@
         <div class="content_box f5back">
           <div class="content_box_con">
             <div>
-              <h3 style="text-align: center">Architecture</h3>
+              <h3 style="text-align: center" class="box_title">Architecture</h3>
               <img src="images/architecture.png" style="height: 584px;width: 1100px">
               <div style="margin-top: 40px;">
                 <p class="lineHight18">
@@ -376,7 +393,7 @@
         <div class="content_box ffback">
           <div class="content_box_con">
             <div style="width: 100%">
-              <h3 style="text-align: center;margin-bottom: 30px">DatenLord Optimization Strategy</h3>
+              <h3 style="text-align: center;margin-bottom: 30px" class="box_title">DatenLord Optimization Strategy</h3>
               <div style="display: flex;justify-content: space-between">
                 <p style="margin: 0" class="lineHight18">In general, there are two kinds of storage needs from an
                   application perspective: one is latency-sensitive, and the other is throughput-sensitive. As for
@@ -398,7 +415,7 @@
         <div class="content_box fcback">
           <div class="content_box_con">
             <div style="width: 100%">
-              <h3 style="text-align: center">Target Usage Scenarios</h3>
+              <h3 style="text-align: center" class="box_title">Target Usage Scenarios</h3>
               <p style="margin: 30px 0 20px 0" class="lineHight18">DatenLord has several target scenarios, which fall
                 into two main categories:</p>
               <div style="display: flex;justify-content: space-between;width: 100%">
@@ -423,7 +440,7 @@
         <div class="quickStart">
           <div class="quickStart_bkcolor">
             <div class="quickStart_con">
-              <h3 style="text-align: center;margin: 50px 0 0 0;">Quick Start</h3>
+              <h3 style="text-align: center;margin: 50px 0 0 0;" class="box_title">Quick Start</h3>
               <div style="display: flex;justify-content: space-between;margin-top: 30px">
                 <div>
                   <h3 class="title">To deploy DatenLord via K8S</h3>
@@ -519,39 +536,39 @@ kubectl apply -f datenlord-demo.yaml
         <div class="content_box ffback">
           <div class="content_box_con">
             <div>
-              <h3 style="text-align: center">Road Map</h3>
+              <h3 style="text-align: center" class="box_title">Road Map</h3>
               <div style="margin-top: 40px ">
                 <div style="margin: 23px 0 0 0;display: flex">
                   <div class="ellipse">
                     <p>0.1</p>
                   </div>
-                  <p style="margin: 0 0 0 20px">Refactor async fuse lib to provide clear async APIs, which is used by
+                  <p style="margin: 0 0 0 20px" class="mapText">Refactor async fuse lib to provide clear async APIs, which is used by
                     the datenlord filesystem.</p>
                 </div>
                 <div style="margin: 23px 0 0 0;display: flex">
                   <div class="ellipse">
                     <p>0.2</p>
                   </div>
-                  <p style="margin: 0 0 0 20px">Support all Fuse APIs in the datenlord fs.</p>
+                  <p style="margin: 0 0 0 20px" class="mapText">Support all Fuse APIs in the datenlord fs.</p>
                 </div>
                 <div style="margin: 23px 0 0 0;display: flex">
                   <div class="ellipse">
                     <p>0.3</p>
                   </div>
-                  <p style="margin: 0 0 0 20px">Make fuse lib fully asynchronous. Switch async fuse lib’s device
+                  <p style="margin: 0 0 0 20px" class="mapText">Make fuse lib fully asynchronous. Switch async fuse lib’s device
                     communication channel from blocking I/O to io_uring.</p>
                 </div>
                 <div style="margin: 23px 0 0 0;display: flex">
                   <div class="ellipse">
                     <p>0.4</p>
                   </div>
-                  <p style="margin: 0 0 0 20px">Complete K8s integration test.</p>
+                  <p style="margin: 0 0 0 20px" class="mapText">Complete K8s integration test.</p>
                 </div>
                 <div style="margin: 23px 0 0 0;display: flex">
                   <div class="ellipse">
-                    <p>0.5</p>
+                    <p>1.0</p>
                   </div>
-                  <p style="margin: 0 0 0 20px">Complete Tensorflow k8s integration and finish performance comparison
+                  <p style="margin: 0 0 0 20px" class="mapText">Complete Tensorflow k8s integration and finish performance comparison
                     with raw fs.</p>
                 </div>
               </div>
@@ -562,7 +579,7 @@ kubectl apply -f datenlord-demo.yaml
       <div id="docs_con_phone" class="docs_con_phone">
         <div class="f5back docs_phone_con">
           <h3 class="margin10" style="margin-top: 20px;margin-bottom: 30px">What is Datenlord ?</h3>
-          <img src="images/2.png" style="width: 335px; height: 200px" class="img_margin_10">
+          <img src="images/2_mo.png" style="width: 335px; height: 200px" class="img_margin_10">
           <p class="text">DatenLord is a next-generation cloud-native distributed storage system, which aims to be
             application-orientated software-defined storage (SDS) platform. On one hand, DatenLord is designed as a
             cloud-native storage system, which itself is distributed, fault-tolerant, and graceful hot-upgrade. These
@@ -576,7 +593,7 @@ kubectl apply -f datenlord-demo.yaml
         </div>
         <div class="ffback docs_phone_con">
           <h3 class="h3_center">Why do we build DatenLord?</h3>
-          <img src="images/6.png" style="width: 335px; height: 200px" class="img_margin_10">
+          <img src="images/6_mo.png" style="width: 335px; height: 200px" class="img_margin_10">
           <p class="text">Firstly, the recent computer hardware architecture revolution stimulates storage software
             refractory. The mainstream SDS systems haven’t changed much in recent 10 years, and at that time hard-disk
             drive (HDD) was the main storage device. Nowadays, solid-state drive (SSD) become the mainstream, not to
@@ -591,7 +608,7 @@ kubectl apply -f datenlord-demo.yaml
             blocking-style/synchronous IO. Therefore we think it’s time to build a next-generation SDS system that takes
             advantage of the storage performance revolution as far as possible, by leveraging non-blocking/asynchronous
             IO, asynchronized programming, NVMe, and even non-volatile memory.</p>
-          <img src="images/7.png" style="width: 335px; height: 200px" class="img_margin_10">
+          <img src="images/7_mo.png" style="width: 335px; height: 200px" class="img_margin_10">
           <p class="text">Secondly, most existing IT systems are computing and storage isolated, that applications and
             storage systems had their dedicated clusters, respectively. This isolated architecture is no longer
             feasible, in that nowadays, applications are dealing with much larger data than ever before. One notorious
@@ -662,11 +679,11 @@ kubectl apply -f datenlord-demo.yaml
         <div class="f5back docs_phone_con">
           <h3 class="h3_center">Target Usage Scenarios</h3>
           <p class="lineHight18 text">DatenLord has several target scenarios, which fall into two main categories:</p>
-          <img src="images/4.png" style="width: 335px; height: 200px" class="img_margin_10">
+          <img src="images/4_mo.png" style="width: 335px; height: 200px" class="img_margin_10">
           <p class="lineHight18">Latency-sensitive cases, that DatenLord will coordinate with K8S to schedule containers
             close to data to minimize latency: Containerized applications, especially stateful applications; Serverless,
             Lambda, FaaS, etc, event-driven tasks;</p>
-          <img src="images/5.png" style="width: 335px; height: 200px" class="img_margin_10">
+          <img src="images/5_mo.png" style="width: 335px; height: 200px" class="img_margin_10">
           <p class="lineHight18">Throughput-sensitive cases, that DatenLord will pre-load remote data into local
             clusters to speed up access: AI and big-data jobs, especially training tasks; Multi-cloud storage unified
             management, to facilitate application migration across clouds.</p>
@@ -781,7 +798,7 @@ kubectl apply -f datenlord-demo.yaml
           <div style="margin: 5px 0 0 0;display: flex">
             <div style="display: flex; align-items: center">
               <div class="ellipse">
-                <p>0.5</p>
+                <p>1.0</p>
               </div>
             </div>
             <p class="text map_text">Complete Tensorflow k8s integration and finish performance comparison with raw fs.

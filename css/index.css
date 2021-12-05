@@ -7,6 +7,7 @@ body{
     min-height:100vh;
     display: flex;
     flex-direction: column;
+    overflow-x: visible;
 }
 
 /* header --start*/
@@ -35,8 +36,9 @@ body{
 }
 
 .main .header .header_right p {
-    font-weight: bold;
+    font-weight: 400;
     font-size: 20px;
+    font-family: PingFangSC-Regular, PingFang SC;
 }
 
 .main .header .header_right div {
@@ -46,12 +48,21 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #5C77B2;
+    color: #2F519C;
 }
 
 .main .header .header_right .active {
-    background-color: #5C77B2;
+    background-color: #2F519C;
     color: #FFFFFF;
+}
+
+.main .header .header_right .active p {
+    font-weight: 600;
+    font-family: PingFangSC-Semibold, PingFang SC;
+}
+
+.datenLord {
+    width: 240px;
 }
 
 .datenLord_logo {
