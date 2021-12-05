@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Docs</title>
+  <title>DatenLord</title>
   <link rel="icon" href="./images/favicon.ico" type="image/x-icon"/>
   <link type="text/css" rel="styleSheet" href="./css/index.css" />
   <link type="text/css" rel="styleSheet" href="./css/reset.css" />
@@ -90,8 +90,6 @@
     .quickStart_bkcolor {
       width: 100%;
       height: 100%;
-      background-color: #D6EAFF;
-      opacity: 80%;
       display: flex;
       justify-content: center;
       padding-bottom: 65px;
@@ -579,7 +577,9 @@ kubectl apply -f datenlord-demo.yaml
       <div id="docs_con_phone" class="docs_con_phone">
         <div class="f5back docs_phone_con">
           <h3 class="margin10" style="margin-top: 20px;margin-bottom: 30px">What is Datenlord ?</h3>
-          <img src="images/2_mo.png" style="width: 335px; height: 200px" class="img_margin_10">
+          <div style="width: 100%;text-align: center">
+            <img src="images/2_mo.png" style="width: 335px; height: 200px" class="img_margin_10">
+          </div>
           <p class="text">DatenLord is a next-generation cloud-native distributed storage system, which aims to be
             application-orientated software-defined storage (SDS) platform. On one hand, DatenLord is designed as a
             cloud-native storage system, which itself is distributed, fault-tolerant, and graceful hot-upgrade. These
@@ -593,7 +593,9 @@ kubectl apply -f datenlord-demo.yaml
         </div>
         <div class="ffback docs_phone_con">
           <h3 class="h3_center">Why do we build DatenLord?</h3>
-          <img src="images/6_mo.png" style="width: 335px; height: 200px" class="img_margin_10">
+          <div style="width: 100%;text-align: center">
+            <img src="images/6_mo.png" style="width: 335px; height: 200px" class="img_margin_10">
+          </div>
           <p class="text">Firstly, the recent computer hardware architecture revolution stimulates storage software
             refractory. The mainstream SDS systems haven’t changed much in recent 10 years, and at that time hard-disk
             drive (HDD) was the main storage device. Nowadays, solid-state drive (SSD) become the mainstream, not to
@@ -608,7 +610,9 @@ kubectl apply -f datenlord-demo.yaml
             blocking-style/synchronous IO. Therefore we think it’s time to build a next-generation SDS system that takes
             advantage of the storage performance revolution as far as possible, by leveraging non-blocking/asynchronous
             IO, asynchronized programming, NVMe, and even non-volatile memory.</p>
-          <img src="images/7_mo.png" style="width: 335px; height: 200px" class="img_margin_10">
+          <div style="width: 100%;text-align: center">
+            <img src="images/7_mo.png" style="width: 335px; height: 200px" class="img_margin_10">
+          </div>
           <p class="text">Secondly, most existing IT systems are computing and storage isolated, that applications and
             storage systems had their dedicated clusters, respectively. This isolated architecture is no longer
             feasible, in that nowadays, applications are dealing with much larger data than ever before. One notorious
@@ -621,7 +625,9 @@ kubectl apply -f datenlord-demo.yaml
         </div>
         <div class="f5back docs_phone_con">
           <h3 class="h3_center">Architecture</h3>
-          <img src="images/illustrator_mo.png">
+          <div style="width: 100%;text-align: center">
+            <img src="images/illustrator_mo.png">
+          </div>
           <p class="lineHight18 text" style="margin-top: 10px!important;">
             DatenLord is of classical master-slave architecture. To achieve better storage performance, DatenLord has a
             coupled architecture with K8S, that DatenLord can be deployed within a K8S cluster, in order to leverage
@@ -679,11 +685,15 @@ kubectl apply -f datenlord-demo.yaml
         <div class="f5back docs_phone_con">
           <h3 class="h3_center">Target Usage Scenarios</h3>
           <p class="lineHight18 text">DatenLord has several target scenarios, which fall into two main categories:</p>
-          <img src="images/4_mo.png" style="width: 335px; height: 200px" class="img_margin_10">
+          <div style="width: 100%;text-align: center">
+            <img src="images/4_mo.png" style="width: 335px; height: 200px" class="img_margin_10">
+          </div>
           <p class="lineHight18">Latency-sensitive cases, that DatenLord will coordinate with K8S to schedule containers
             close to data to minimize latency: Containerized applications, especially stateful applications; Serverless,
             Lambda, FaaS, etc, event-driven tasks;</p>
-          <img src="images/5_mo.png" style="width: 335px; height: 200px" class="img_margin_10">
+          <div style="width: 100%;text-align: center">
+            <img src="images/5_mo.png" style="width: 335px; height: 200px" class="img_margin_10">
+          </div>
           <p class="lineHight18">Throughput-sensitive cases, that DatenLord will pre-load remote data into local
             clusters to speed up access: AI and big-data jobs, especially training tasks; Multi-cloud storage unified
             management, to facilitate application migration across clouds.</p>

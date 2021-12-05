@@ -1,4 +1,4 @@
-@media only screen and (max-width: 710px) {
+@media only screen and (max-width: 1200px) {
     .main {
         min-width: 340px;
         width: 100%;
@@ -54,6 +54,8 @@
     /** 内容开始 */
 
     .main .content_body {
+        width: 100%;
+        max-width: 360px;
         margin: 15px 0 45px 0 !important;
     }
     .main .content_box {
@@ -62,10 +64,6 @@
         margin-bottom: 15px;
         margin-top: 15px;
         margin-right: 0;
-    }
-
-    .main .content_body:nth-child(2n + 1) {
-        margin-right: 15px;
     }
 
     .main .content_box:nth-child(2n + 1) {
@@ -102,6 +100,8 @@
 
     .content .content_recruit {
         margin: 15px 20px;
+        max-width: 600px;
+        width: 100%;
     }
     .recruit_Con_img {
         margin: 0;
