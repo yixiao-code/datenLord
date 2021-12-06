@@ -43,7 +43,7 @@ body{
 
 .main .header .header_right div {
     cursor: pointer;
-    width: 150px;
+    padding: 0 30px;
     height: 100%;
     display: flex;
     justify-content: center;
@@ -72,7 +72,42 @@ body{
 .header_arrow {
     width: 15px;
     height: 10px;
-    margin-left: 10px;
+    margin-left: 15px;
+}
+
+.lang li:hover {
+    background-color: #2F519C;
+    color: #ffffff !important;
+}
+
+.lang_select:hover .lang_box{
+    display: block !important;
+}
+
+.lang_select:hover .drop_down {
+    transform: rotate(180deg)
+}
+
+.lang_box {
+    position: absolute;
+    top: 60px;
+    height: auto !important;
+    width: auto !important;
+    background-color: #ffffff;
+    margin-left: -45px;
+    display: none !important;
+}
+.lang {
+    width: 100px;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.lang li {
+    font-size: 20px;
+    line-height: 36px;
+    color: #2F519C;
+    cursor: pointer;
 }
 
 /* header --end*/
