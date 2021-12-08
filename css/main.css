@@ -63,7 +63,7 @@
     .main .lang_box {
         padding: 0 !important;
         top: 50px;
-        margin-left: -20px;
+        left: 0;
     }
 
     .main .lang {
@@ -75,6 +75,17 @@
         line-height: 32px;
         color: #2F519C;
         cursor: pointer;
+    }
+
+    .main .lang_select {
+        padding: 0 0 0 10px !important;
+        position: relative;
+        width: 60px;
+        box-sizing: border-box;
+    }
+
+    .main .github_icon{
+        padding: 0 0 0 10px !important;
     }
 
     /** 头部结束 */
@@ -297,6 +308,10 @@
         align-items: center;
         justify-content: center;
         flex-direction: column;
+    }
+
+    .main .footer_icon {
+        justify-content: center;
     }
     /** 页脚结束 */
 }
