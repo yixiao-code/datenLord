@@ -150,7 +150,7 @@ body{
     display: flex;
     align-items: center;
     width: 320px;
-    justify-content: end;
+    justify-content: flex-end;
     cursor: pointer;
 }
 
