@@ -151,6 +151,7 @@ body{
     align-items: center;
     width: 320px;
     justify-content: end;
+    cursor: pointer;
 }
 
 .footer_icon img{
